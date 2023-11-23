@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>- pinku </title>
+    <!--REQUIRED STYLE SHEETS-->
+    <style>
+        body {
+            background-image: url("");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #333; /* Text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .black-overlay {
+            position: relative;
+            background-color: rgba(12, 153, 219, 0.7);
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(3, 3, 3, 0.5);
+            color: white; /* Overlay text color */
+            border-radius: 50px;
+        }
+
+        .upload-section {
+            width: 80%;
+            height: 400px;
+            margin: 20px auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            color: lightblue;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .column {
+            flex: 0 0 calc(25% - 10px);
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: #f9f9f9; /* Card background color */
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+        .about-section {
+            padding: 20px;
+        }
+
+        .about-section h3,
+        .what-we-do-section h3 {
+            font-size: 24px;
+        }
+
+        .about-section p,
+        .what-we-do-section p {
+            font-size: 16px;
+        }
+
+        /* Styling Meet our Members */
+        .meet-members {
+            text-align: center;
+            background-color: #f9f9f9; /* Background color */
+            padding: 30px;
+            color: #333; /* Text color */
+        }
+
+        .meet-members h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: navy;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .contact-section h1,
+        .contact-section h4 {
+            color: #fff;
+        }
+
+        .contact-section .ik {
+            background-color: aqua;
+            padding: 20px;
+            border-radius: 50px;
+            display: inline-block;
+        }
+
+        .contact-section .ik h1 {
+            font-size: 36px;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-section .ik i {
+            color: #fff;
+            font-size: 48px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .contact-section .ik h4 {
+            color: #fff;
+        }
+
+        .upload-section input[type="file"],
+        .upload-section input[type="submit"] {
+            padding: 10px 20px;
+            background-color: rgb(0, 113, 128);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .upload-section input[type="file"]:hover,
+        .upload-section input[type="submit"]:hover {
+            background-color: rgb(248, 53, 14);
+        }
+        .logo-container {
+           text-align: center;
+           padding: 20px;
+           background-image: url("assets\cutm23.png");
+           background-size: contain;
+          background-repeat: no-repeat;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <h1>Centurion University of Technology and Management</h1>
+       
+    </div>
+
+    <!-- Black Overlay Section -->
+    <div class="black-overlay">
+        <!-- Content for the section -->
+        <center>
+            <h2>SOIL CLASSIFICATION USING CNN</h2>
+            <!-- Other content goes here -->
+        </center>
+    </div>
+
+    <!-- Upload Section -->
+    <center>
+        <div class="upload-section">
+            <form action="/submit" method="post" enctype="multipart/form-data">
+                <input type="file" name="my_image">
+                <input type="submit" value="Upload and Predict">
+            </form>
+            {% if prediction %}
+            <p style="color: rgb(33, 10, 238);">Predicted Soil Type: {{ prediction }}</p>
+            <img src="{{ img_path }}" alt="Uploaded Image" width="300">
+            {% endif %}
+        </div>
+    </center><br><br><br>
+    
+
+    <!-- About Us Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-6 what-we-do-section">
+                    <h3>What we do</h3>
+                    <p style="display: flex;">
+                        At our hub, we harness the power of Convolutional Neural Networks (CNN) to predict soil types based on images. 🖼️ Our platform enables seamless image uploads for analysis and delivers accurate soil type predictions. 📈 Committed to enhancing agricultural practices, environmental studies, and land management, we strive to revolutionize soil analysis through innovation and expertise. 🌱 Join us in shaping a sustainable future and unraveling the mysteries hidden within the Earth's diverse soils! 🌍✨
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <center>
+        <div style="padding: 20px;">
+            <h1>Meet our Members</h1>
+        </div>
+        </center>
+
+    <!-- Team Members Section -->
+    <div class="row" style="padding: 40px 0;">
+        <div class="column">
+            <div class="card">
+                <img  style="width:100%">
+                <div class="container">
+                    <h2>Smruti ranjan maharana</h2>
+                    <p>Created the web interface</p>
+                    <p>210301120209@cutm.ac.in</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img  style="width:100%">
+                <div class="container">
+                    <h2>Amlan Nayak</h2>
+                    <p>Created the Model,Report</p>
+                    <p>210301120227@cutm.ac.in</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img style="width:100%">
+                <div class="container">
+                    <h2>Bibhudutta Das</h2>
+                    <p>Design Powerpoint and help in model creation</p>
+                    <p>210301120263@cutm.ac.in</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img  style="width:100%">
+                <div class="container">
+                    <h2>Shan Mohammad</h2>
+                    <p>Powerpoint and Report</p>
+                    <p>210301120251@cutm.ac.in</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+     <center>
+        <section style="background-color: rgba(12, 153, 219, 0.7);height: 15vh;border-radius: 50px;">
+            <div  style="display: flex; justify-content: center; align-items: center;">
+                <div class="row text-center">
+                    <div class=>
+                        <h1><i ></i>GUIDED BY:</h1>
+                        <h2>
+                            <i></i><strong>Prof. Chinmayee Dora</strong></i>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </center>
+</html>
