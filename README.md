@@ -1,21 +1,15 @@
-# Soil Type Classification using Deep Learning
-This project involves the classification of soil types using deep learning techniques. The model is trained on images of different soil types and can predict the type of soil from a given image.
+# Soil Type Classification using Deep Learning 🌱🔍
 
-## Installation
-Clone the repository:git clone https://github.com/yourusername/soil-type-classification.git
-cd soil-type-classification
+This project classifies soil types using deep learning techniques. The model predicts soil type from images.
+
+
+
 ## Install dependencies:
-pip install -r requirements.txt
-
-
-## Copy code
+pip install -r requirements.txt 
 git clone https://github.com/pinku/soil-type-classification.git
 cd soil-type-classification
 
 
-
-## Copy code
-pip install -r requirements.txt
 ## Usage
 ## Dataset Preparation
 The dataset contains images of various soil types.
@@ -50,7 +44,7 @@ images/: Folder containing images used in the README
 Contributing
 Feel free to contribute by forking the repository and submitting pull requests. Please open an issue first to discuss significant changes.
 
-Credits
+## Credits
 The dataset used in this project is sourced from [kaggel]
-License
+## License
 This project is licensed under [MIT]. See the LICENSE file for details.
